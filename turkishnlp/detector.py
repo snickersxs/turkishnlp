@@ -56,21 +56,8 @@ class TurkishNLP:
 
     @staticmethod
     def __get_directory():
-        """
-
-        :return: Return the target directory depending on the OS
-        """
-        if sys.platform == 'win32' and 'APPDATA' in os.environ:
-            homedir = os.environ['APPDATA']
-
-            # Otherwise, install in the user's home directory.
-        else:
-            homedir = os.path.expanduser('~/')
-            if homedir == '~/':
-                raise ValueError("Could not find a default download directory")
-
-            # append "TRnlpdata" to the home directory
-        return os.path.join(homedir, 'TRnlpdata')
+        
+        return "/home/alperenbayar2/TRnlpdata"
 
     @staticmethod
     def list_words(text):
