@@ -57,7 +57,7 @@ class TurkishNLP:
     @staticmethod
     def __get_directory():
         
-        return "gs://orbital-signal-237813/static/"
+        return "/tmp/"
 
     @staticmethod
     def list_words(text):
