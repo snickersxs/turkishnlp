@@ -27,15 +27,15 @@ class TurkishNLP:
         :return: Returns the words list which is read from the "kelimeler.txt" file
         """
         dir = self.__get_directory()
-        if os.path.isfile(dir + "/words.pkl"):
-            with open(dir + "/words.pkl", "rb") as f:
+        if os.path.isfile(dir + "words.pkl"):
+            with open(dir + "words.pkl", "rb") as f:
                 word_set = pickle.load(f)
                 self.all_words = word_set
         else:
             raise Exception('You need to download the data first using download() function')
 
-        if os.path.isfile(dir + "/words_counted.pkl"):
-            with open(dir + "/words_counted.pkl", "rb") as f_count:
+        if os.path.isfile(dir + "words_counted.pkl"):
+            with open(dir + "words_counted.pkl", "rb") as f_count:
                 self.counted_words = pickle.load(f_count)
         else:
             raise Exception('You need to download the data first using download() function')
@@ -50,14 +50,14 @@ class TurkishNLP:
         if not os.path.exists(dir):
             os.makedirs(dir)
 
-        urllib.request.urlretrieve("http://turkish-nlp.com/datanlp/words.pkl", dir + "/words.pkl")
-        urllib.request.urlretrieve("http://turkish-nlp.com/datanlp/words_counted.pkl", dir + "/words_counted.pkl")
+        urllib.request.urlretrieve("http://turkish-nlp.com/datanlp/words.pkl", dir + "words.pkl")
+        urllib.request.urlretrieve("http://turkish-nlp.com/datanlp/words_counted.pkl", dir + "words_counted.pkl")
         print("Download is successful")
 
     @staticmethod
     def __get_directory():
         
-        return "/home/alperenbayar2/TRnlpdata"
+        return ""
 
     @staticmethod
     def list_words(text):
