@@ -57,7 +57,7 @@ class TurkishNLP:
     @staticmethod
     def __get_directory():
         
-        return ""
+        return "static/"
 
     @staticmethod
     def list_words(text):
