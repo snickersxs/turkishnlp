@@ -47,8 +47,8 @@ class TurkishNLP:
         """
         dir = self.__get_directory()
 
-        if not os.path.exists(dir):
-            os.makedirs(dir)
+        #if not os.path.exists(dir):
+        #    os.makedirs(dir)
 
         urllib.request.urlretrieve("http://turkish-nlp.com/datanlp/words.pkl", dir + "words.pkl")
         urllib.request.urlretrieve("http://turkish-nlp.com/datanlp/words_counted.pkl", dir + "words_counted.pkl")
